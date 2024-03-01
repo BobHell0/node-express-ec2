@@ -9,11 +9,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/chicken', (req, res) => {
-    return res.download("./hello.jpeg", (err) => {
-        if (err) {
-            res.send({
-                error : err,
-                msg   : "Problem downloading the file"
-            })
-        }});
+	return res.download("./chkn.jpeg", (err) => {
+		if (err) {
+			res.send({
+				error : err,
+				msg   : "Problem downloading the file"
+			})
+		}
+	});
 })
